@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.html import format_html
 
 from backend.forms import CustomerUserCreationForm, CustomerUserChangeForm
-from backend.models import CustomUser, NewsLetter, Label, Tag, Discount, Brand, Company
+from backend.models import CustomUser, NewsLetter, Label, Tag, Discount, Brand, Company, Collection
 
 
 # Register your models here.
@@ -98,3 +98,11 @@ admin.site.register(Company, CompanyAdmin)
 #     image_tag.short_description = 'Image'
 #
 # admin.site.register(Category, CategroyAdmin)
+
+
+class CollectionAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
+
+admin.site.register(Collection, CollectionAdmin)
+
