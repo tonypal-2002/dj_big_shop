@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.html import format_html
 
 from backend.forms import CustomerUserCreationForm, CustomerUserChangeForm
-from backend.models import CustomUser, NewsLetter, Label, Tag, Discount
+from backend.models import CustomUser, NewsLetter, Label, Tag, Discount, Brand
 
 
 # Register your models here.
@@ -66,3 +66,13 @@ class DiscountAdmin(admin.ModelAdmin):
 
 admin.site.register(Discount, DiscountAdmin)
 
+class BrandAdmin(admin.ModelAdmin):
+
+    list_display = ('name', 'image_path','image_tag')
+
+    def image_tag(self, obj):
+        return  format_html('<img src="{}" width="150" height="150" />'.format(obj.image_path.url))
+
+    image_tag.short_description = 'Image'
+
+admin.site.register(Brand, BrandAdmin)
