@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
@@ -320,3 +322,12 @@ class ProductCategory(models.Model):
     class Meta:
         db_table = 'product_category'
         unique_together = (('product', 'category'),)
+
+class ProductLabel(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    label = models.ForeignKey(Label, on_delete=models.CASCADE)
+    added_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'product_label'
+        unique_together = (('product', 'label'),)
