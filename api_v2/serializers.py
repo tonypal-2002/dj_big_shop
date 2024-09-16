@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate
 from rest_framework import serializers
 
-from backend.models import CustomUser
+from backend.models import CustomUser, Category
 
 from django.utils.translation import gettext_lazy as _
 
@@ -47,3 +47,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'image_path']
