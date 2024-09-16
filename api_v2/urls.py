@@ -2,7 +2,7 @@ from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
 
 from api_v2.views import CustomAuthToken, UserCreateAPIView, CurrentUserView, LogoutAPIView, CategoryListView, \
-    BrandListView
+    BrandListView, ProductListView
 
 urlpatterns = [
     # Login Type 1
@@ -23,4 +23,7 @@ urlpatterns = [
 
     # Brand
     path('brands', BrandListView.as_view(), name='brand_list'),
+
+    # Product
+    path('products', ProductListView.as_view(), name='product_list'),
 ]
