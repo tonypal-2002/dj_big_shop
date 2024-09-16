@@ -3,8 +3,9 @@ from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.generics import CreateAPIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from api_v2.serializers import CustomUserSerializer, EmailAuthTokenSerializer
 from backend.models import CustomUser
@@ -30,6 +31,19 @@ class CustomAuthToken(ObtainAuthToken):
 
 
         return  Response(token.key)
+
+
+class CurrentUserView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        return Response({
+            'id': user.id,
+            'name': user.email,
+            'email': user.email,
+            'avatar': user.get_avatar_url(),
+        })
 
 class UserCreateAPIView(CreateAPIView):
     permission_classes = [AllowAny]

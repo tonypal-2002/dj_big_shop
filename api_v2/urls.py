@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
 
-from api_v2.views import CustomAuthToken, UserCreateAPIView
+from api_v2.views import CustomAuthToken, UserCreateAPIView, CurrentUserView
 
 urlpatterns = [
     # Login Type 1
@@ -11,5 +11,7 @@ urlpatterns = [
     path('login', CustomAuthToken.as_view(), name='custom_api_token_auth'),
 
     path('register', UserCreateAPIView.as_view(), name='create'),
+
+    path('user', CurrentUserView.as_view(), name='current-user'),
 
 ]
