@@ -57,3 +57,13 @@ class UserCreateAPIView(CreateAPIView):
             return Response({"message": "User successfully registered"}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class LogoutAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self,request,format=None):
+        request.user.auth_token.delete()
+
+        data = {
+            'message':'logout was successfully'
+        }
+        return Response(data=data,status=status.HTTP_200_OK)
