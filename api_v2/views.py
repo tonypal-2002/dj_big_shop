@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from api_v2.serializers import CustomUserSerializer, EmailAuthTokenSerializer, CategorySerializer, BrandSerializer, \
-    ProductSerializer
-from backend.models import CustomUser, Category, Brand, Product
+    ProductSerializer, SubCategorySerializer
+from backend.models import CustomUser, Category, Brand, Product, SubCategory
 
 
 # Create your views here.
@@ -110,3 +110,13 @@ class ProductListView(generics.ListAPIView):
             "data": serializer.data
         }
         return Response(data)
+class SubCategoryListView(generics.ListAPIView):
+    permission_classes = [AllowAny]
+    queryset = SubCategory.objects.all()
+    serializer_class = SubCategorySerializer
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        data = {
+            "data": serializer.data
+        }
