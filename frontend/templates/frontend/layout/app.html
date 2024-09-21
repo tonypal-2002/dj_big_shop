@@ -32,9 +32,13 @@
     {% include 'frontend/layout/header.html' %}
 
        {% if request.path == '/' %}
+
         <main class="main">
             <!--Slider Partial-->
             {% include 'frontend/slider/type1.html' %}
+
+             <!--Banner Partial-->
+            {% include 'frontend/slider/banner/type1.html' %}
         </main>
     {% endif %}
 
