@@ -1,7 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from backend.models import Product, Category
 
 def home(request):
-    return render(request, 'frontend/home.html')
+
+    # Retrieve all categories for use in the view
+
+    categories = Category.objects.all()
+
+    data = {
+        'categories': categories,
+    }
+    return render(request, 'frontend/home.html', data)
 
 def login(request):
     return render(request, 'frontend/auth/login.html')
