@@ -1,0 +1,23 @@
+[
+    {
+        "model": "backend.Collection",
+        "pk": 1,
+        "fields": {
+            "name": "New Arrival"
+        }
+    },
+    {
+        "model": "backend.Collection",
+        "pk": 2,
+        "fields": {
+            "name": "Best Seller"
+        }
+    },
+    {
+        "model": "backend.Collection",
+        "pk": 3,
+        "fields": {
+            "name": "Special Offer"
+        }
+    }
+]
