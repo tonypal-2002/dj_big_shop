@@ -185,12 +185,12 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(ProductCategory)
 
 class CountryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    list_display = ('id', 'name', 'code')
 
 admin.site.register(Country, CountryAdmin)
 
 class StateAdmin(admin.ModelAdmin):
-    list_display = ('id', 'country', 'name')
+    list_display = ('id', 'country', 'name', 'code')
 
 admin.site.register(State, StateAdmin)
 

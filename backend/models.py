@@ -461,6 +461,8 @@ class Country(models.Model):
 
     name = models.CharField(max_length=255, unique=True)
 
+    code = models.CharField(max_length=255, null=True, blank=True)
+
     def __str__(self):
         return self.name
 
@@ -475,6 +477,8 @@ class State(models.Model):
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, blank=True, null=True)
 
     name = models.CharField(max_length=255, unique=True)
+
+    code = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return self.name
