@@ -5,7 +5,7 @@ from django.utils.html import format_html
 from backend.forms import CustomerUserCreationForm, CustomerUserChangeForm
 from backend.models import CustomUser, NewsLetter, Label, Tag, Discount, Brand, Company, Collection, SubCategory, \
     ProductImage, ProductCategory, ProductLabel, ProductTag, ProductCollection, Cart, Order, OrderItem, Category, \
-    Product
+    Product, Country, State, City
 
 
 # Register your models here.
@@ -183,3 +183,18 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProductCategory)
+
+class CountryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+admin.site.register(Country, CountryAdmin)
+
+class StateAdmin(admin.ModelAdmin):
+    list_display = ('id', 'country', 'name')
+
+admin.site.register(State, StateAdmin)
+
+class CityAdmin(admin.ModelAdmin):
+    list_display = ('id', 'state', 'name')
+
+admin.site.register(City, CityAdmin)
