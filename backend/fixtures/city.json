@@ -1,0 +1,73 @@
+[
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Chennai"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Coimbatore"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Madurai"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Tiruchirappalli"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Salem"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Tirunelveli"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Erode"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Tiruppur"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Vellore"
+        }
+    },
+    {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Thoothukudi"
+        }
+    }
+
+]
