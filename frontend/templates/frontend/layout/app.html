@@ -31,7 +31,7 @@
      <!--Header Partial-->
     {% include 'frontend/layout/header.html' %}
 
-       {% if request.path == '/' %}
+           {% if request.path == '/' and not category_present %}
 
         <main class="main">
             <!--Slider Partial-->
