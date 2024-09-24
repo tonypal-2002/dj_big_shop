@@ -1,0 +1,30 @@
+[
+    {
+        "model": "backend.Country",
+        "fields": {
+            "name": "United States of America",
+            "code": "USA"
+        }
+    },
+    {
+        "model": "backend.Country",
+        "fields": {
+            "name": "Canada",
+            "code": "CAN"
+        }
+    },
+    {
+        "model": "backend.Country",
+        "fields": {
+            "name": "United Kingdom",
+            "code": "UK"
+        }
+    },
+    {
+        "model": "backend.Country",
+        "fields": {
+            "name": "India",
+            "code": "IND"
+        }
+    }
+]
