@@ -68,6 +68,257 @@
             "state": 1,
             "name": "Thoothukudi"
         }
-    }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Cuddalore"
+        }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Hosur"
+        }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Pappireddipatti"
+        }
+    },
 
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Pennagaram"
+        }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Puliangudi"
+        }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Othakadai"
+        }
+    },
+
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Rasipuram"
+        }
+    },
+        {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Thirukkattupalli"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Peranampattu"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Pudupatti"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Pallapatti"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Oddanchatram"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Sirumugai"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Pattiveeranpatti"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Periyakulam"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Tindivanam"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Panruti"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Sankarankoil"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Gobichettipalayam"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Palladam"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Kottagudem"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Devakottai"
+        }
+    },
+       {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Jayankondam"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Arani"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Sirkali"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Thuraiyur"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Uthiramerur"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Vedaranyam"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Viluppuram"
+        }
+    },
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Ambur"
+        }
+    },
+
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Nagercoil"
+        }
+    },
+
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Kanchipuram"
+        }
+    },
+
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Kumbakonam"
+        }
+    },
+
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Tiruvannamalai"
+        }
+    },
+
+           {
+        "model": "backend.City",
+        "fields": {
+            "state": 1,
+            "name": "Udhagamandalam (Ooty)"
+        }
+    }
 ]
