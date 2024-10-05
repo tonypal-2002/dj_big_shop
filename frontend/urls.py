@@ -1,5 +1,6 @@
 from django.urls import path
-from frontend.views import home, auth_login,auth_logout, register, forget_password, about, account, show
+from frontend.views import home, auth_login, auth_logout, register, forget_password, about, account, show, cart, \
+    increase_quantity, decrease_quantity, remove_from_cart, clear_cart
 
 urlpatterns = [
     path('', home, name='home'),
@@ -11,5 +12,10 @@ urlpatterns = [
     path('forget_password', forget_password, name='forget_password'),
     path('account', account, name='account'),
     path('about', about, name='about'),
+    path('cart', cart, name='cart'),
+    path('cart/increase/<int:id>/', increase_quantity, name='increase_quantity'),
+    path('cart/decrease/<int:id>/', decrease_quantity, name='decrease_quantity'),
+    path('cart/remove/<int:id>/', remove_from_cart, name='remove_from_cart'),
+    path('cart/clear/', clear_cart, name='clear_cart'),
 
 ]
