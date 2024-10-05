@@ -12,6 +12,27 @@ def home(request):
     # Prepare the initial data dictionary
     data = {}
 
+    # If the user is authenticated, retrieve cart information
+    if user.is_authenticated:
+        # Print user email for debugging (remove in production)
+        print(user.email)
+
+        # Filter cart items for the current user
+        cart_items = Cart.objects.filter(custom_user=user)
+
+        # Calculate the grand total for the cart
+        grand_total = Cart.grand_total(customer_id=user.id)
+
+        # Add cart data to the context
+        data['cart_items'] = cart_items  # Pass the filtered cart items to the template
+        data['grand_total'] = grand_total
+        data['cart_count'] = cart_items.count()
+    else:
+        # If the user is not authenticated, set default cart values
+        data['cart_items'] = []
+        data['grand_total'] = 0
+        data['cart_count'] = 0
+
     # Retrieve all categories for use in the view
     categories = Category.objects.all()
     data['categories'] = categories
@@ -33,33 +54,13 @@ def home(request):
 
         # Pass filtered products to the template
         data['products'] = products
+        return render(request, 'frontend/product/list/type1.html', data)
     else:
         # If no specific category is selected, show all products
         products = Product.objects.all()
         data['products'] = products
         data['page_title'] = "All Products"
         data['product_count'] = products.count()
-
-    # If the user is authenticated, retrieve cart information
-    if user.is_authenticated:
-        # Print user email for debugging (remove in production)
-        print(user.email)
-
-        # Filter cart items for the current user
-        cart_items = Cart.objects.filter(custom_user=user)
-
-        # Calculate the grand total for the cart
-        grand_total = Cart.grand_total(customer_id=user.id)
-
-        # Add cart data to the context
-        data['cart_items'] = cart_items  # Pass the filtered cart items to the template
-        data['grand_total'] = grand_total
-        data['cart_count'] = cart_items.count()
-    else:
-        # If the user is not authenticated, set default cart values
-        data['cart_items'] = []
-        data['grand_total'] = 0
-        data['cart_count'] = 0
 
     # Render the template with the combined data
     return render(request, 'frontend/home.html', data)
